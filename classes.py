@@ -2,14 +2,13 @@ import socket
 import os
 
 class Fuck:
-    def __init__(self, server,  socket_path: str = "/tmp/my_socket.sock"):
-        self.socket_path = socket_path
+    def __init__(self, socket_path: str):
         pass
 
 
     def connect(self) -> bool:
         return True
-
+ 
     def tx(self, data: str) -> bool:
         # is anyone here
         pass
@@ -40,7 +39,7 @@ class Socket:
         server.bind(self.socket_path)
         server.listen(1)
         print("Server is listening for incomig commands...")
-                                                                                                                                                                     
+
         while True:
             connection, _ = server.accept()
             while True:
@@ -64,5 +63,4 @@ class Socket:
         print("Received response:", response.decode())
         client.close()
         return ????
-
 
