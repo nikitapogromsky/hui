@@ -40,7 +40,7 @@ class Socket:
         server.bind(self.socket_path)
         server.listen(1)
         print("Server is listening for incomig commands...")
-                                                                                                                                                                      1,1           Top
+                                                                                                                                                                     
         while True:
             connection, _ = server.accept()
             while True:
